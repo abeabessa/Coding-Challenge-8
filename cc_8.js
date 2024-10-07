@@ -40,3 +40,16 @@ class Manager extends Employee {
         return `${super.getDetails()}, Bonus: $${this.bonus}`; // Include bonus in details
     }
 }
+//Handle Bonuses for Managers
+class Department {
+    //... (previous code)
+
+    calculateTotalSalaryWithBonus() {
+        return this.employees.reduce((total, employee) => {
+            if (employee instanceof Manager) {
+                return total + employee.salary + employee.bonus; // Add bonus for managers
+            }
+            return total + employee.salary;
+        }, 0);
+    }
+}
