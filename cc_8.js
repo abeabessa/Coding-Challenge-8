@@ -12,4 +12,19 @@ class Employee {
         return `Name: ${this.name}, Position: ${this.position}, Salary: $${this.salary}`;
     }
 }
+class Department {
+    constructor(name) {
+        this.name = name;
+        this.employees = []; // Array to hold Employee objects
+    }
 
+    addEmployee(employee) {
+        if (employee instanceof Employee) {
+            this.employees.push(employee);
+        }
+    }
+
+    getDepartmentSalary() {
+        return this.employees.reduce((total, employee) => total + employee.salary, 0);
+    }
+}
