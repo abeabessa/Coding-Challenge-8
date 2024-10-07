@@ -16,7 +16,7 @@ class Employee {
 class Department {
     constructor(name) {
         this.name = name;
-        this.employees = []; // Array to hold Employee objects
+        this.employees = []; // Array with Employee objects
     }
 
     addEmployee(employee) {
