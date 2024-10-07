@@ -12,6 +12,7 @@ class Employee {
         return `Name: ${this.name}, Position: ${this.position}, Salary: $${this.salary}`;
     }
 }
+//Create a Department Class
 class Department {
     constructor(name) {
         this.name = name;
